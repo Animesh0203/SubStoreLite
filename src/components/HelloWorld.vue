@@ -176,7 +176,7 @@
     </div>
 
     <!-- Display Saved Posts -->
-    <div v-if="posts.length" :class="!isOpen ? 'mt-6' : 'mt-[512px]'">
+    <div v-if="posts.length" :class="!isOpen ? 'mt-2' : 'mt-[512px]'">
       <h2 class="text-xl font-semibold mb-4">Saved Posts</h2>
       <div v-for="(post, index) in posts" :key="index" class="border-4 p-2 border-green-600 py-4">
         <p class="text-sm"><strong>Sub:</strong> {{ post.text }}</p>
@@ -198,8 +198,8 @@
       <button @click="deletePost(index)" class="text-red-500 mt-2 underline">
           Delete
         </button>
-    </div>
-    <p v-else class="mt-6 text-gray-500 text-center">No posts available.</p>
+      </div>
+      <p v-else :class="!isOpen ? 'mt-6' : 'mt-[512px] text-gray-500 text-cente'">No posts available.</p>
   </div>
 </template>
 
